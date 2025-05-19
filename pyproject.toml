@@ -1,0 +1,19 @@
+[project]
+name = "phonelcdpart-mcp"
+version = "0.1.0"
+description = "MCP tool to scrape phonelcdparts.com"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp",
+    "firecrawl-py",
+    "beautifulsoup4",
+    "uvicorn" # For running the ASGI server
+]
+license = {text = "MIT"}
+
+[project.scripts]
+start-mcp = "phonelcdpart_mcp.app:start_mcp_server" # Points to the new function, using underscore for module name
+
+[tool.setuptools]
+py-modules = ["app"] # Explicitly declare 'app.py' as a module to package

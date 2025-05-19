@@ -1,0 +1,26 @@
+params:
+  type: object
+  properties:
+    FIRECRAWL_API_KEY:
+      type: string
+      description: Firecrawl API Key
+  required:
+    - FIRECRAWL_API_KEY
+
+npx:
+  command: |
+    FIRECRAWL_API_KEY={FIRECRAWL_API_KEY} python app.py
+  config: |
+    {
+      "mcpServers": {
+        "phonelcdparts": {
+          "command": "python",
+          "args": [
+            "app.py"
+          ],
+          "env": {
+            "FIRECRAWL_API_KEY": "YOUR_API_KEY_HERE"
+          }
+        }
+      }
+    } 
