@@ -9,18 +9,4 @@ params:
 
 npx:
   command: |
-    FIRECRAWL_API_KEY={FIRECRAWL_API_KEY} fastmcp run app.py
-  config: |
-    {
-      "mcpServers": {
-        "phonelcdparts": {
-          "command": "python",
-          "args": [
-            "app.py"
-          ],
-          "env": {
-            "FIRECRAWL_API_KEY": "YOUR_API_KEY_HERE"
-          }
-        }
-      }
-    } 
+    FIRECRAWL_API_KEY={FIRECRAWL_API_KEY} fastmcp run app.py 
