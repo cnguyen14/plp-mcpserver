@@ -3,7 +3,6 @@ import urllib.parse
 from firecrawl import FirecrawlApp
 from bs4 import BeautifulSoup
 from fastmcp import FastMCP
-import os
 
 # Initialize FastMCP
 mcp = FastMCP(
@@ -14,7 +13,7 @@ mcp = FastMCP(
 
 # --- Global Configuration ---
 # IMPORTANT: Replace with your actual Firecrawl API key or load from environment for security
-FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY")
+FIRECRAWL_API_KEY = "fc-bda2a324809b4cb2982a607a8c31ffac" 
 BASE_SEARCH_URL = "https://www.phonelcdparts.com/catalogsearch/result/?q="
 
 # --- Helper Function ---

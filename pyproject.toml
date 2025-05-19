@@ -10,7 +10,6 @@ dependencies = [
     "beautifulsoup4",
     "uvicorn" # For running the ASGI server
 ]
-license = {text = "MIT"}
 
 [project.scripts]
 start-mcp = "phonelcdpart_mcp.app:start_mcp_server" # Points to the new function, using underscore for module name
