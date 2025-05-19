@@ -8,7 +8,8 @@ dependencies = [
     "fastmcp",
     "firecrawl-py",
     "beautifulsoup4",
-    "uvicorn" # For running the ASGI server
+    "uvicorn", # For running the ASGI server
+    "python-dotenv" # For loading .env files
 ]
 
 [project.scripts]

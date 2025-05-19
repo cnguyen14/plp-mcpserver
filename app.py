@@ -1,8 +1,13 @@
 import json
 import urllib.parse
+import os # Added for environment variables
+from dotenv import load_dotenv # Added for .env file support
 from firecrawl import FirecrawlApp
 from bs4 import BeautifulSoup
 from fastmcp import FastMCP
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize FastMCP
 mcp = FastMCP(
@@ -12,8 +17,11 @@ mcp = FastMCP(
 )
 
 # --- Global Configuration ---
-# IMPORTANT: Replace with your actual Firecrawl API key or load from environment for security
-FIRECRAWL_API_KEY = "fc-bda2a324809b4cb2982a607a8c31ffac" 
+# Load Firecrawl API key from environment variable
+FIRECRAWL_API_KEY = os.getenv("FIRECRAWL_API_KEY")
+if not FIRECRAWL_API_KEY:
+    raise ValueError("FIRECRAWL_API_KEY not found in environment variables. Please set it in your .env file.")
+
 BASE_SEARCH_URL = "https://www.phonelcdparts.com/catalogsearch/result/?q="
 
 # --- Helper Function ---
